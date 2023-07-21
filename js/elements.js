@@ -1,0 +1,17 @@
+export const buttonPlay = document.querySelector('.play');
+export const buttonPause = document.querySelector('.pause');
+export const buttonStop = document.querySelector('.stop');
+export const buttonAdd = document.querySelector('.add');
+export const buttonLess = document.querySelector('.less');
+export const buttonFlorest = document.querySelector('.florest');
+export const buttonRain = document.querySelector('.rain');
+export const buttonCafe = document.querySelector('.cafe');
+export const buttonFire = document.querySelector('.fire');
+export let minutes = document.querySelector('.minutes');
+export let seconds = document.querySelector('.seconds');
+export const buttonSun = document.querySelector('.ph-sun');
+export const buttonMoon = document.querySelector('.ph-moon');
+export const florestVolume = document.getElementById('florestVolume');
+export const rainVolume = document.getElementById('rainVolume');
+export const cafeVolume = document.getElementById('cafeVolume');
+export const fireVolume = document.getElementById('fireVolume');

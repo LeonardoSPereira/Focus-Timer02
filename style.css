@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+    --bg-color: hsl(0, 0%, 100%);
+    --tt-color: hsl(240, 6%, 21%);
+    --bg-button-controls: hsl(240, 6%, 21%);
+    --bg-button: hsl(240, 9%, 89%);
+    --bg-button-active: hsl(194, 97%, 31%);
+    --bg-sound-active: hsl(0, 0%, 100%);
+    --rg-color: hsl(240, 6%, 21%);
+    --rg-color-active: hsl(0, 0%, 100%);
+}
+
+html.dark {
+    --tt-color: hsl(0, 0%, 100%);
+    --bg-color: hsl(240, 6%, 21%);
+    --bg-button-controls: hsl(240, 7%, 78%);
+    --bg-button: hsl(240, 6%, 17% );
+    --bg-button-active: hsl(195, 74%, 15%);
+    --rg-color: hsl(0, 0%, 100%);
+    --rg-color-active: hsl(0, 0%, 100%);
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 1.6rem;
+    background-color: var(--bg-color) ;
+}
+
+.hide {
+    display: none;
+}
+
+.theme i {
+    font-size: 4.4rem;
+    position: absolute;
+    top: 6rem;
+    right: 6rem;
+    cursor: pointer;
+    color: var(--tt-color);
+}
+
+main {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20rem;
+}
+
+#timer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.timer span {
+    color: var(--tt-color);
+    font-size: 12rem;
+    text-align: center;
+}
+
+
+.controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 1.7rem;
+    max-width: 31rem;
+}
+
+.controls div {
+    cursor: pointer;
+}
+
+.controls ion-icon {
+    font-size: 5.4rem;
+    color: var(--bg-button-controls);
+}
+
+
+#sounds {
+    display: grid;
+    gap: 3.2rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    place-content: center;
+    
+}
+
+
+#sounds div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3.2rem;
+    cursor: pointer;
+    border-radius: 2.4rem;
+    background-color: var(--bg-button);
+    width: 13.8rem;
+    height: 15.2rem;
+}
+
+#sounds div svg path {
+    fill: var(--bg-button-controls);
+}
+
+#sounds div.active {
+    background-color: var(--bg-button-active);
+}
+
+#sounds div.active path {
+    fill: var(--bg-sound-active);
+}
+
+#sounds div input[type="range"] {
+    appearance: none;
+    width: 9rem;
+    height: 0.4rem;
+    background-color: var(--rg-color);
+}
+
+#sounds div.active input[type="range"] {
+    background-color: var(--rg-color-active);
+}
+
+#sounds div input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 999rem;
+    background-color: var(--rg-color);
+}
+
+#sounds div.active input[type="range"]::-webkit-slider-thumb {
+    background-color: var(--rg-color-active );
+}
+
+@media (max-width: 830px) {
+    main {
+        flex-direction: column;
+    }
+}
